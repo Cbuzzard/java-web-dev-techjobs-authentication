@@ -1,4 +1,6 @@
-package org.launchcode.javawebdevtechjobsauthentication.models.dto;
+package org.launchcode.javawebdevtechjobsauthentication.models.s5.dto;
+
+import org.launchcode.javawebdevtechjobsauthentication.models.s5.dto.LoginFormDTO;
 
 public class RegisterFormDTO extends LoginFormDTO {
 

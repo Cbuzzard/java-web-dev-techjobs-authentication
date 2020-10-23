@@ -1,6 +1,6 @@
-package org.launchcode.javawebdevtechjobsauthentication.models.data;
+package org.launchcode.javawebdevtechjobsauthentication.models.data.s5;
 
-import org.launchcode.javawebdevtechjobsauthentication.models.Job;
+import org.launchcode.javawebdevtechjobsauthentication.models.s5.Job;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

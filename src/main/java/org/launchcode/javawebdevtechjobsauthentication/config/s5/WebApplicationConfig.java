@@ -1,4 +1,4 @@
-package org.launchcode.javawebdevtechjobsauthentication;
+package org.launchcode.javawebdevtechjobsauthentication.config.s5;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

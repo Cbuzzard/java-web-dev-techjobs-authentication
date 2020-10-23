@@ -1,8 +1,8 @@
-package org.launchcode.javawebdevtechjobsauthentication;
+package org.launchcode.javawebdevtechjobsauthentication.config.s5;
 
-import org.launchcode.javawebdevtechjobsauthentication.controllers.AuthenticationController;
-import org.launchcode.javawebdevtechjobsauthentication.models.User;
-import org.launchcode.javawebdevtechjobsauthentication.models.data.UserRepository;
+import org.launchcode.javawebdevtechjobsauthentication.controllers.s5.AuthenticationController;
+import org.launchcode.javawebdevtechjobsauthentication.models.s5.User;
+import org.launchcode.javawebdevtechjobsauthentication.models.data.s5.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -21,7 +21,7 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
     @Autowired
     AuthenticationController authenticationController;
 
-    private static final List<String> whitelist = Arrays.asList("/login", "/register", "/logout", "/css");
+    private static final List<String> whitelist = Arrays.asList("/s5/login", "/s5/register", "/s5/logout", "css");
 
     private static boolean isWhitelisted(String path) {
         for (String pathRoot : whitelist) {
@@ -52,7 +52,7 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
         }
 
         // The user is NOT logged in
-        response.sendRedirect("/login");
+        response.sendRedirect("/s5/login");
         return false;
     }
 

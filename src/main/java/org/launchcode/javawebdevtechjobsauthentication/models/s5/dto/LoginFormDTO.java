@@ -1,4 +1,4 @@
-package org.launchcode.javawebdevtechjobsauthentication.models.dto;
+package org.launchcode.javawebdevtechjobsauthentication.models.s5.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

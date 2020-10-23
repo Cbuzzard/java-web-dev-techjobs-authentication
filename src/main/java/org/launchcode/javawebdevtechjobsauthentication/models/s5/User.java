@@ -1,11 +1,9 @@
-package org.launchcode.javawebdevtechjobsauthentication.models;
+package org.launchcode.javawebdevtechjobsauthentication.models.s5;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 /**
  * Created by LaunchCode

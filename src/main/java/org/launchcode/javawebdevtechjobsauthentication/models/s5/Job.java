@@ -1,4 +1,4 @@
-package org.launchcode.javawebdevtechjobsauthentication.models;
+package org.launchcode.javawebdevtechjobsauthentication.models.s5;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

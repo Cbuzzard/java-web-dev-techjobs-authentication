@@ -1,7 +1,7 @@
-package org.launchcode.javawebdevtechjobsauthentication.controllers;
+package org.launchcode.javawebdevtechjobsauthentication.controllers.s5;
 
-import org.launchcode.javawebdevtechjobsauthentication.models.data.JobRepository;
-import org.launchcode.javawebdevtechjobsauthentication.models.Job;
+import org.launchcode.javawebdevtechjobsauthentication.models.data.s5.JobRepository;
+import org.launchcode.javawebdevtechjobsauthentication.models.s5.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +14,7 @@ import java.util.Optional;
 /**
  * Created by LaunchCode
  */
+@RequestMapping("s5")
 @Controller
 public class HomeController {
 
@@ -23,13 +24,13 @@ public class HomeController {
     @RequestMapping("")
     public String index(Model model) {
         model.addAttribute("jobs", jobRepository.findAll());
-        return "index";
+        return "s5/index";
     }
 
     @GetMapping("add")
     public String displayAddJobForm(Model model) {
         model.addAttribute(new Job());
-        return "add";
+        return "s5/add";
     }
 
     @PostMapping("add")
@@ -37,7 +38,7 @@ public class HomeController {
                                        Errors errors) {
 
         if (errors.hasErrors()) {
-            return "add";
+            return "s5/add";
         }
 
         jobRepository.save(newJob);
@@ -51,7 +52,7 @@ public class HomeController {
         if (!optJob.isEmpty()) {
             Job job = (Job) optJob.get();
             model.addAttribute("job", job);
-            return "view";
+            return "s5/view";
         } else {
             return "redirect:/";
         }
